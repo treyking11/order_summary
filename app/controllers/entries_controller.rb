@@ -10,6 +10,7 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
+    @entry = Entry.find(params [:id])
   end
 
   # GET /entries/new
@@ -24,7 +25,7 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
-    @entry = Entry.new(entry_params)
+    @entry = Entry.new
 
     respond_to do |format|
       if @entry.save
