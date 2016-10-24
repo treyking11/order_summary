@@ -4,13 +4,13 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+    @entries = Entry.new
   end
 
   # GET /entries/1
   # GET /entries/1.json
   def show
-    @entry = Entry.find(params [:id])
+    # @entry = Entry.find(params [:id])
   end
 
   # GET /entries/new
