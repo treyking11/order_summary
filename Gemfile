@@ -48,4 +48,5 @@ group :development do
   gem 'spring'
   gem 'simple_form', '~> 3.0.0.rc'
   gem 'bootstrap'
+  gem 'carrierwave'
 end

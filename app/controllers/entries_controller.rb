@@ -15,13 +15,13 @@ class EntriesController < ApplicationController
 
   # GET /entries/new
   def new
+    @options_for_platform = Entry.options_for_platform
     @entry = Entry.new
   end
 
   # GET /entries/1/edit
   def edit
   end
-
   # POST /entries
   # POST /entries.json
   def create
@@ -50,6 +50,7 @@ class EntriesController < ApplicationController
         format.json { render json: @entry.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # DELETE /entries/1
@@ -72,4 +73,5 @@ class EntriesController < ApplicationController
     def entry_params
       params.fetch(:entry, {})
     end
+
 end

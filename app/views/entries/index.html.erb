@@ -3,62 +3,9 @@
 <html>
 
   <body>
-    <!-- <div class="container-fluid top_nav_blue">
-      <div class="container">
-        <div class="row">
-          <div class="navbar navbar-default">
-            <a href='#' class='navbar-brand'>
-              <img src="app/assets/images/logo.png" class="logo"/>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <div class="container col-sm-8 col-md-5">
-    <form>
-      <div class="form-group">
-        <%= form_for @entries, html: {class: "form-control"} do |f| %>
-          <div class= "form-group has-danger">
-            <label for="order_name">Order Name</label>
-            <%= f.text_field :name, autocomplete: "off", required: true, class: "form-control", placeholder: "Enter Unique Order Name"%>
-          </div>
-          <div class= "form-group">
-            <label for="description">Description</label>
-            <%= f.text_area :description, autocomplete: "off", required: true, class: "form-control", rows: 5, placeholder: "Enter A Description For This Order"%>
-          </div>
-          <div class= "form-group">
-            <label for="start_date">Start Date</label>
-            <%= f.date_select :start_date, autocomplete: "off", required: true, class: "form-control"%>
-          </div>
-          <div class= "form-group">
-            <label for="end_date">End Date</label>
-            <%= f.date_select :end_date, autocomplete: "off", required: true, class: "form-control"%>
-          </div>
-          <div class= "form-group">
-            <label for="advertiser_rate">Advertiser Rate</label>
-            <%= f.number_field :advertiser_rate, autocomplete: "off", required: true, class: "form-control", placeholder: "$"%>
-          </div>
-          <div class= "form-group">
-            <label for="imp_quantity">Impression Quantity</label>
-            <%= f.number_field :imp_quantity, autocomplete: "off", required: true, step: 0.01, class: "form-control", placeholder: "Number Of Impressions For Order"%>
-          </div>
-          <div class= "form-group">
-            <label for="platforms">Platforms</label>
-            <%= f.text_field :platforms, autocomplete: "off", required: true, class: "form-control", placeholder: "Select Platforms"%>
-          </div>
-          <div class= "form-group">
-            <label for="zip_codes">ZIp Codes</label>
-            <%= f.text_field :zip_codes, autocomplete: "off", required: true, class: "form-control", placeholder: "Select Zip Codes For Targeting"%>      
-          </div>
 
-          <button type="submit" class="btn btn-primary">Submit Order</button>
-        <% end %>
 
-      </div>
     </form>
 
   </body>
 </html>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script> -->
