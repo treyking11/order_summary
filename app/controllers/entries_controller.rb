@@ -1,6 +1,5 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
-
   # GET /entries
   # GET /entries.json
   def index
@@ -15,7 +14,7 @@ class EntriesController < ApplicationController
 
   # GET /entries/new
   def new
-    @options_for_platform = Entry.options_for_platform
+    # @options_for_platform = Entry.options_for_platform
     @entry = Entry.new
   end
 

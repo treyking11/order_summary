@@ -1,0 +1,63 @@
+/* line 6, /Users/treyking/DEV/new_partner_order_summary/order_summary/app/assets/stylesheets/entries.scss */
+.form-group {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+/* line 11, /Users/treyking/DEV/new_partner_order_summary/order_summary/app/assets/stylesheets/entries.scss */
+.label-group {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+/* line 18, /Users/treyking/DEV/new_partner_order_summary/order_summary/app/assets/stylesheets/entries.scss */
+.form-control {
+  width: 100%;
+  height: 0px;
+  padding: 6px 12px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px;
+}
+
+/* line 29, /Users/treyking/DEV/new_partner_order_summary/order_summary/app/assets/stylesheets/entries.scss */
+.page-header {
+  margin-top: 0px;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/* line 36, /Users/treyking/DEV/new_partner_order_summary/order_summary/app/assets/stylesheets/entries.scss */
+.navbar {
+  background-color: #428BCA;
+  width: 100%;
+  border: none;
+}
+
+/* line 42, /Users/treyking/DEV/new_partner_order_summary/order_summary/app/assets/stylesheets/entries.scss */
+.logo {
+  height: 40px;
+  padding: 5px;
+  padding-left: 35%;
+}
+
+/* line 48, /Users/treyking/DEV/new_partner_order_summary/order_summary/app/assets/stylesheets/entries.scss */
+.top_nav_blue {
+  background-color: #428BCA;
+}
+
+/* line 58, /Users/treyking/DEV/new_partner_order_summary/order_summary/app/assets/stylesheets/entries.scss */
+.platform-inline {
+  margin-right: 5px;
+}
+
+/* line 68, /Users/treyking/DEV/new_partner_order_summary/order_summary/app/assets/stylesheets/entries.scss */
+.pre-scrollable {
+  margin-bottom: 30px;
+  max-height: 150px;
+}

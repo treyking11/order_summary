@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .form-group {
   margin-bottom: 15px;
   box-sizing: border-box;
@@ -16,7 +17,7 @@
 
 .form-control {
   width: 100%;
-  height: 35px;
+  height: 0px;
   padding: 6px 12px;
   background-color: #fff;
   background-image: none;
@@ -26,7 +27,7 @@
 }
 
 .page-header {
-  margin-top: 0!important;
+  margin-top: 0px;
   padding-bottom: 9px;
   margin: 40px 0 20px;
   border-bottom: 1px solid #eee;
@@ -46,4 +47,30 @@
 
 .top_nav_blue {
   background-color: #428BCA;
+}
+
+// #long-scroll {
+//   max-height: 300px;
+//   margin-top: 15px;
+//   margin-bottom: 30px;
+// }
+
+.platform-inline {
+  margin-right: 15px;
+}
+
+// #short-scroll {
+//   max-height: 100px;
+//   margin-top: 30px;
+//   margin-bottom: 30px;
+// }
+
+.pre-scrollable {
+  margin-bottom: 30px;
+  max-height: 150px;
+}
+
+h4 {
+  text-decoration: underline;
+  font-style: italic;
 }

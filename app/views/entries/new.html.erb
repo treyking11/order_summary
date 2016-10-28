@@ -1,6 +1,7 @@
 
 <html>
 
+
   <body>
     <!-- <div class="container-fluid top_nav_blue">
       <div class="container">
@@ -20,59 +21,73 @@
       <div class="form-group">
         <%= form_for @entry, html: {class: "form-control"} do |f| %>
           <div class= "form-group has-danger">
-            <label for="order_name">Order Name</label>
+            <h4>Order Name</h4>
             <%= f.text_field :name, autocomplete: "off", required: true, class: "form-control", placeholder: "Enter Unique Order Name"%>
           </div>
           <div class= "form-group">
-            <label for="description">Description</label>
+            <h4>Description</h4>
             <%= f.text_area :description, autocomplete: "off", required: true, class: "form-control", rows: 5, placeholder: "Enter A Description For This Order"%>
           </div>
           <div class= "form-group">
-            <label for="start_date">Start Date</label>
+            <h4>Start Date</h4>
             <%= f.date_select :start_date, autocomplete: "off", required: true, class: "form-control"%>
           </div>
           <div class= "form-group">
-            <label for="end_date">End Date</label>
+            <h4>End Date</h4>
             <%= f.date_select :end_date, autocomplete: "off", required: true, class: "form-control"%>
           </div>
           <h3>Budget</h3>
           <div class= "form-group">
-            <label for="advertiser_rate">Advertiser Rate</label>
+            <h4>Advertiser Rate</h4>
             <%= f.number_field :advertiser_rate, autocomplete: "off", required: true, step: 0.01, class: "form-control", placeholder: "$"%>
           </div>
           <div class= "form-group">
-            <label for="imp_quantity">Impression Quantity</label>
+            <h4>Impression Quantity</h4>
             <%= f.number_field :imp_quantity, autocomplete: "off", required: true, class: "form-control", placeholder: "Number Of Impressions For Order"%>
           </div>
           <h3>Inventory</h3>
           <div class= "form-group">
-            <label for="platforms">Platforms</label>
-            <%= f.text_field :platforms, autocomplete: "off", required: true, class: "form-control", placeholder: "Select Platforms"%>
-            <%= f.select :platforms, @options_for_platform, multiple: true, size: 4, prompt: 'Select Platforms'%>
+            <h4>Platforms</h4>
           </div>
           <div class= "form-group">
-            <label for="creative_types">Creative Types</label>
-            <%= f.text_field :creative_types, autocomplete: "off", required: true, class: "form-control", placeholder: "Type Of Creative"%>
+          <%= render 'platforms'%>
           </div>
+          <div class= "form-group">
+            <h4>Creative Types</h4>
+          </div>
+          <%= render 'creative_types'%>
           <h3>Targeting</h3>
+          <div class= "form-group">
+            <h4>Audiences (Consumer Segments)</h4>
+          </div>
           <%= render 'targeting' %>
           <div class= "form-group">
-            <label for="zip_codes">ZIp Codes</label>
-            <%= f.text_field :zip_codes, autocomplete: "off", required: true, class: "form-control", placeholder: "Select Zip Codes For Targeting"%>
+            <h4>Zip Codes</h4>
+            <%= f.text_area :zip_codes, autocomplete: "off", required: true, class: "form-control", rows: 5, placeholder: "Select Zip Codes For Targeting"%>
+          </div>
+          <div class="form-group">
+            <h4>File Upload</h4>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">Attach File To Upload</p>
           </div>
           <div class= "form-group">
-            <label for="states">States</label>
-            <%= f.text_field :states, autocomplete: "off", required: true, class: "form-control", placeholder: "Select States For Targeting"%>
+            <h4>States</h4>
+            <%= f.text_area :states, autocomplete: "off", required: true, class: "form-control", rows: 5, placeholder: "Select States For Targeting"%>
           </div>
-
-
-
-
-
+          <div class= "form-group">
+            <h4>Content Categories</h4>
+          </div>
+          <%= render 'content_categories' %>
+          <div class= "form-group">
+            <h4>Carriers</h4>
+          </div>
+          <%= render 'carriers' %>
+          <div class= "form-group">
+            <h4>Operating Systems</h4>
+          </div>
+          <%= render 'operating_systems' %>
 
           <%= render 'form' %>
-
-          <%= link_to 'Back', entries_path %>
         <% end %>
 
       </div>
@@ -94,3 +109,5 @@
 </html>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
