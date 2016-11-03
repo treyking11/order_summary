@@ -33,10 +33,14 @@
   border-bottom: 1px solid #eee;
 }
 
-.navbar {
+.navbar-brand {
   background-color: #428BCA;
-  width: 100%;
-  border:none;
+
+}
+
+.navbar-header {
+  background-color: #428BCA;
+
 }
 
 .logo {
@@ -45,30 +49,19 @@
   padding-left: 35%;
 }
 
-.top_nav_blue {
-  background-color: #428BCA;
+.navbar-default {
+  background-color: #173a5c;
 }
-
-// #long-scroll {
-//   max-height: 300px;
-//   margin-top: 15px;
-//   margin-bottom: 30px;
-// }
 
 .platform-inline {
   margin-right: 15px;
 }
 
-// #short-scroll {
-//   max-height: 100px;
-//   margin-top: 30px;
-//   margin-bottom: 30px;
-// }
-
 .pre-scrollable {
   margin-bottom: 30px;
   max-height: 150px;
 }
+
 
 h4 {
   text-decoration: underline;

@@ -3,30 +3,43 @@
 
 
   <body>
-    <!-- <div class="container-fluid top_nav_blue">
-      <div class="container">
-        <div class="row">
-          <div class="navbar navbar-default">
-            <a href='#' class='navbar-brand'>
-              <img src="app/assets/images/logo.png" class="logo"/>
-            </a>
-          </div>
+
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img alt="logo" src="logo.png">
+          </a>
         </div>
       </div>
-    </div> -->
-    <div class="container col-sm-8 col-md-5">
-      <h1>New Order</h1>
+    </nav>
 
-    <form>
+
+  <div class="container-fluid col-md-6" style="margin-left:100px">
+    <h1>New Campaign</h1>
+    <form data-toggle="validator" role="form">
       <div class="form-group">
         <%= form_for @entry, html: {class: "form-control"} do |f| %>
-          <div class= "form-group has-danger">
-            <h4>Order Name</h4>
-            <%= f.text_field :name, autocomplete: "off", required: true, class: "form-control", placeholder: "Enter Unique Order Name"%>
+          <div class= "form-group">
+            <h4>Campaign Name</h4>
+            <%= f.text_field :name, autocomplete: "off", required: true, class: "form-control", placeholder: "Enter Unique Campaign Name"%>
+          </div>
+          <div class= "form-group">
+            <h4>Agency Name</h4>
+            <%= f.text_field :name, autocomplete: "off", required: true, class: "form-control", placeholder: "Enter Agnecy Name"%>
+          </div>
+          <div class= "form-group">
+            <h4>Advertiser Name</h4>
+            <%= f.text_field :name, autocomplete: "off", required: true, class: "form-control", placeholder: "Enter Advertiser Name"%>
+          </div>
+          <div class= "form-group">
+            <h4>Advertiser URL</h4>
+            <%= f.text_field :name, autocomplete: "off", required: true, class: "form-control", placeholder: "Enter Advertiser URL"%>
           </div>
           <div class= "form-group">
             <h4>Description</h4>
-            <%= f.text_area :description, autocomplete: "off", required: true, class: "form-control", rows: 5, placeholder: "Enter A Description For This Order"%>
+            <%= f.text_area :description, autocomplete: "off", required: true, class: "form-control", rows: 5, placeholder: "Enter A Description For This Campaign"%>
           </div>
           <div class= "form-group">
             <h4>Start Date</h4>
@@ -43,7 +56,7 @@
           </div>
           <div class= "form-group">
             <h4>Impression Quantity</h4>
-            <%= f.number_field :imp_quantity, autocomplete: "off", required: true, class: "form-control", placeholder: "Number Of Impressions For Order"%>
+            <%= f.number_field :imp_quantity, autocomplete: "off", required: true, class: "form-control", placeholder: "Number Of Impressions For Campaign"%>
           </div>
           <h3>Inventory</h3>
           <div class= "form-group">
@@ -61,9 +74,9 @@
             <h4>Audiences (Consumer Segments)</h4>
           </div>
           <%= render 'targeting' %>
-          <div class= "form-group">
+          <div class= "form-group has-feedback">
             <h4>Zip Codes</h4>
-            <%= f.text_area :zip_codes, autocomplete: "off", required: true, class: "form-control", rows: 5, placeholder: "Select Zip Codes For Targeting"%>
+            <%= f.text_area :zip_codes, autocomplete: "off", required: true, pattern: "^[0-9]{5}$",  maxlength: 5, class: "form-control", rows: 5, placeholder: "Select Zip Codes For Targeting"%>
           </div>
           <div class="form-group">
             <h4>File Upload</h4>
@@ -90,6 +103,30 @@
           <%= render 'form' %>
         <% end %>
 
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
       </div>
 
 
@@ -109,5 +146,4 @@
 </html>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
