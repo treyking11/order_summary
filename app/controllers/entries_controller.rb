@@ -16,6 +16,8 @@ class EntriesController < ApplicationController
   def new
     # @options_for_platform = Entry.options_for_platform
     @entry = Entry.new
+    @metros = Entry.metros
+    @targeting =Entry.targeting
   end
 
   # GET /entries/1/edit
