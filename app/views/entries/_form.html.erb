@@ -1,21 +1,5 @@
-<%= form_for(@entry) do |f| %>
-  <% if @entry.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
-
-      <ul>
-      <% @entry.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions" style="margin-top:25px">
-    <%= f.submit class: "btn btn-primary btn-lg"%>
-  </div>
-<% end %>
 
 <%= form_for @entry do |f| %>
+<%= render partial: 'inputs', locals: {f: f} %>
   <%= f.submit %>
 <% end %>

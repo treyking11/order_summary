@@ -17,7 +17,9 @@ class EntriesController < ApplicationController
     # @options_for_platform = Entry.options_for_platform
     @entry = Entry.new
     @metros = Entry.metros
-    @targeting =Entry.targeting
+    @targeting = Entry.targeting
+    @content = Entry.content
+    @carriers = Entry.carriers
   end
 
   # GET /entries/1/edit
@@ -26,7 +28,7 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
-    @entry = Entry.new
+    @entry = Entry.new(entry_params)
 
     respond_to do |format|
       if @entry.save
@@ -72,7 +74,30 @@ class EntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.fetch(:entry, {})
+      params.require(:entry).permit(
+        :name,
+        :description,
+        :start_date,
+        :end_date,
+        :created_at,
+        :updated_at,
+        :imp_quantity,
+        :advertiser_rate,
+        :platforms,
+        :creative_types,
+        :audiences,
+        :states,
+        :metros,
+        :zip_codes,
+        :address,
+        :content_cats,
+        :carriers,
+        :operating_sys,
+        :agency_name,
+        :advertiser_name,
+        :advertiser_url,
+        :audiences_prem,
+        )
     end
 
 end

@@ -12,7 +12,7 @@ gem 'carrierwave'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.2'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -21,7 +21,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'pg', '~> 0.18.4'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -46,7 +45,7 @@ group :development, :test do
   gem 'byebug'
   gem 'bootstrap-sass'
   gem 'autoprefixer-rails'
-
+  gem 'sqlite3'
 end
 
 group :development do
@@ -58,4 +57,9 @@ group :development do
   gem 'simple_form', '~> 3.0.0.rc'
   gem 'bootstrap'
   gem 'carrierwave'
+end
+
+
+group :production do
+  gem 'pg', '~> 0.18.4'
 end

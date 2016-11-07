@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024023001) do
+ActiveRecord::Schema.define(version: 20161107215548) do
 
   create_table "entries", force: :cascade do |t|
     t.string   "name"
@@ -32,6 +32,10 @@ ActiveRecord::Schema.define(version: 20161024023001) do
     t.text     "content_cats"
     t.text     "carriers"
     t.text     "operating_sys"
+    t.text     "agency_name"
+    t.text     "advertiser_name"
+    t.text     "advertiser_url"
+    t.text     "audiences_prem"
   end
 
 end

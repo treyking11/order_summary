@@ -1,31 +1,14 @@
 <div class="form-group">
   <label class="form-check-inline">
-    <input class="form-check-input" type="checkbox" id="checkAll_3"> SELECT ALL </input>
+    <input class="form-check-input" type="checkbox" id="checkAll_3" checked> SELECT ALL </input>
   </label>
 </div>
-<div class="platform-inline" id="all_carrier_categories">
-  <label class="form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> AT&T
-  </label>
-  <label class="form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Cricket Wireless
-  </label>
-  <label class="form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> C Spire Wireless
-  </label>
-  <label class="form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Metro PCS
-  </label>
-  <label class="form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5"> Sprint
-  </label>
-  <label class="form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6"> T-Mobile
-  </label>
-  <label class="form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7"> TracFone Wireless
-  </label>
-  <label class="form-check-inline">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8"> Verizon Wireless
-  </label>
+
+<div class="form-group" id="all_carrier_categories">
+  <% @carriers.each do |carrier_name| %>
+    <label class="form-check-inline">
+      <input class="form-check-input" type="checkbox" value="<%= carrier_name %>">
+      <%= carrier_name %>
+     </label>
+   <% end %>
 </div>

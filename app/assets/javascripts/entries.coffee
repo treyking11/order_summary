@@ -13,3 +13,8 @@ $ ->
 $ ->
   $('#checkAll_3').click ->
     $('#all_carrier_categories input').prop('checked', $('#checkAll_3').prop('checked'))
+
+
+# $ ->
+#   if $('#all_carrier_categories').change ->
+#     $('#checkAll_1').toggle()
