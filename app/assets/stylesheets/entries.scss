@@ -6,6 +6,12 @@ body {
   font-family: 'Open Sans',sans-serif !important;
 }
 
+html {
+  margin-bottom: 200px;
+}
+a {
+  color: #000 !important;
+}
 footer {
   position: absolute;
 }
@@ -63,4 +69,8 @@ label {
 h4 {
   text-decoration: underline;
   font-style: italic;
+}
+
+form#new_entry.new_entry {
+  margin-left: 100px;
 }
