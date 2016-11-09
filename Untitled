@@ -1,0 +1,20 @@
+
+
+
+<div class="form-group">
+  <h4>Geofence POI Included</h4>
+  <label class="form-check-inline">
+    <input class="form-check-input" type="checkbox"> Select ONLY If Including Separate Geofence POI With This New Campaign Form </input>
+  </label>
+  <div>
+    <a class="btn btn-primary" href="/expandable_request_form.xlsx"> Download Geofence POI Template </a>
+  </div>
+</div>
+<div class= "form-group">
+  <h4>States</h4>
+  <%= f.text_area :states, autocomplete: "off", class: "form-control", rows: 5, placeholder: "Please Use ONLY 2-Letter Abbreviations, Separated By Commas"%>
+</div>
+<div class= "form-group">
+  <h4>Metros</h4>
+</div>
+<!-- render metros and collapse -->

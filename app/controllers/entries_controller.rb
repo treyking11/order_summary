@@ -17,9 +17,11 @@ class EntriesController < ApplicationController
     # @options_for_platform = Entry.options_for_platform
     @entry = Entry.new
     @metros = Entry.metros
-    @targeting = Entry.targeting
+    #@targeting = Entry.targeting
     @content = Entry.content
     @carriers = Entry.carriers
+    @platforms = Entry.platforms
+    @audiences = Entry.audiences
   end
 
   # GET /entries/1/edit
@@ -29,7 +31,7 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
-
+    #binding.pry
     respond_to do |format|
       if @entry.save
         format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
@@ -45,6 +47,7 @@ class EntriesController < ApplicationController
   # PATCH/PUT /entries/1.json
   def update
     respond_to do |format|
+
       if @entry.update(entry_params)
         format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @entry }
@@ -83,9 +86,7 @@ class EntriesController < ApplicationController
         :updated_at,
         :imp_quantity,
         :advertiser_rate,
-        :platforms,
         :creative_types,
-        :audiences,
         :states,
         :metros,
         :zip_codes,
@@ -97,6 +98,8 @@ class EntriesController < ApplicationController
         :advertiser_name,
         :advertiser_url,
         :audiences_prem,
+        :platforms => [],
+        :audiences => [],
         )
     end
 

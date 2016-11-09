@@ -8,7 +8,7 @@ gem 'spring'
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'bootstrap'
 gem 'carrierwave'
-
+gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.2'
 # Use sqlite3 as the database for Active Record

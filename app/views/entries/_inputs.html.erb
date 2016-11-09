@@ -5,15 +5,15 @@
   </div>
   <div class= "form-group">
     <h4>Agency Name</h4>
-    <%= f.text_field :name, autocomplete: "off", class: "form-control", placeholder: "Enter Agnecy Name"%>
+    <%= f.text_field :agency_name, autocomplete: "off", class: "form-control", placeholder: "Enter Agnecy Name"%>
   </div>
   <div class= "form-group">
     <h4>Advertiser Name</h4>
-    <%= f.text_field :name, autocomplete: "off", class: "form-control", placeholder: "Enter Advertiser Name"%>
+    <%= f.text_field :advertiser_name, autocomplete: "off", class: "form-control", placeholder: "Enter Advertiser Name"%>
   </div>
   <div class= "form-group">
     <h4>Advertiser URL</h4>
-    <%= f.text_field :name, autocomplete: "off", class: "form-control", placeholder: "Enter Advertiser URL"%>
+    <%= f.text_field :advertiser_url, autocomplete: "off", class: "form-control", placeholder: "Enter Advertiser URL"%>
   </div>
   <div class= "form-group">
     <h4>Description</h4>
@@ -41,7 +41,7 @@
     <h4>Platforms</h4>
   </div>
   <div class= "form-group">
-  <%= render 'platforms'%>
+  <%= render partial: 'platforms', locals: {f: f} %>
   </div>
   <div class= "form-group">
     <h4>Creative Types</h4>
@@ -51,7 +51,7 @@
   <div class= "form-group">
     <h4>Audiences (Consumer Segments)</h4>
   </div>
-  <%= render 'targeting' %>
+  <%= render partial: 'targeting', locals: {f: f} %>
   <div class= "form-group">
     <h4>Audiences (Premium Segments - $3 Upcharge)</h4>
   </div>
@@ -60,22 +60,4 @@
     <h4>Zip Codes</h4>
     <%= f.text_area :zip_codes, autocomplete: "off", pattern: "^[0-9]{5}$",  maxlength: 5, class: "form-control", rows: 5, placeholder: "Please Use ONLY 5 Digit Zip Codes, Separated By Commas"%>
   </div>
-  <div class="form-group">
-    <h4>Geofence POI Included</h4>
-    <label class="form-check-inline">
-      <input class="form-check-input" type="checkbox"> Select ONLY If Including Separate Geofence POI With This New Campaign Form </input>
-    </label>
-    <div>
-      <a class="btn btn-primary" href="/expandable_request_form.xlsx"> Download Geofence POI Template </a>
-    </div>
-  </div>
-  <div class= "form-group">
-    <h4>States</h4>
-    <%= f.text_area :states, autocomplete: "off", class: "form-control", rows: 5, placeholder: "Please Use ONLY 2-Letter Abbreviations, Separated By Commas"%>
-  </div>
-  <div class= "form-group">
-    <h4>Metros</h4>
-  </div>
-  <%= render 'metros' %>
-  <%= render 'collapse' %>
 </div>

@@ -1,4 +1,4 @@
-<div class="platform-inline">
+<!-- <div class="platform-inline">
   <label class="form-check-inline">
     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Mobile App"> Mobile App
   </label>
@@ -10,5 +10,19 @@
   </label>
   <label class="form-check-inline">
     <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="Tablet Web"> Tablet Web
+  </label>
+</div
+ -->
+
+<div>
+  <label class="form-check-inline">
+      <%= f.check_box(:platforms, {:multiple => true}, "Mobile App", nil) %>
+      Mobile App
+      <%= f.check_box(:platforms, {:multiple => true}, "Mobile Web", nil) %>
+      Mobile Web
+      <%= f.check_box(:platforms, {:multiple => true}, "Tablet App", nil) %>
+      Tablet App
+      <%= f.check_box(:platforms, {:multiple => true}, "Tablet Web", nil) %>
+      Tablet Web
   </label>
 </div>
