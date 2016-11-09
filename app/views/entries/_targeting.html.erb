@@ -1,8 +1,11 @@
 
 <div class="pre-scrollable">
   <% @audiences.each do |audience_name| %>
-    <label class="form-check-inline">
-      <%= f.check_box(:audiences, {:multiple => true}, audience_name, nil) %>
-    </label>
+    <div class="form-check">
+      <label class="form-check-label">
+        <%= f.check_box(:audiences, {:multiple => true}, audience_name, nil) %>
+        <%= audience_name %>
+      </label>
+    </div>
   <% end %>
 </div>
