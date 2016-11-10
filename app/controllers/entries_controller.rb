@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  before_action :set_loop_arrays, only: [:edit, :new]
   # GET /entries
   # GET /entries.json
   def index
@@ -16,16 +17,20 @@ class EntriesController < ApplicationController
   def new
     # @options_for_platform = Entry.options_for_platform
     @entry = Entry.new
+<<<<<<< HEAD
     @metros = Entry.metros
     @creative_types = Entry.creative_types
     @content = Entry.content
     @carriers = Entry.carriers
     @platforms = Entry.platforms
     @audiences = Entry.audiences
+=======
+>>>>>>> origin/master
   end
 
   # GET /entries/1/edit
   def edit
+    @metros = Entry.metros
   end
   # POST /entries
   # POST /entries.json
@@ -97,10 +102,19 @@ class EntriesController < ApplicationController
         :agency_name,
         :advertiser_name,
         :advertiser_url,
-        :audiences_prem,
+        :audiences_prem => [],
         :platforms => [],
-        :audiences => [],
+        :audiences => []
         )
+    end
+    
+    def set_loop_arrays
+      @metros = Entry.metros
+      #@targeting = Entry.targeting
+      @content = Entry.content
+      @carriers = Entry.carriers
+      @platforms = Entry.platforms
+      @audiences = Entry.audiences 
     end
 
 end
