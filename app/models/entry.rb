@@ -21,6 +21,8 @@ class Entry < ActiveRecord::Base
     ['Mobile App', 'Mobile Web', 'Tablet App', 'Tablet Web']
   end
 
-
+  def self.creative_types
+    ['Mobile Banner', 'Tablet Banner']
+  end
 
 end

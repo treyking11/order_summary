@@ -17,7 +17,7 @@ class EntriesController < ApplicationController
     # @options_for_platform = Entry.options_for_platform
     @entry = Entry.new
     @metros = Entry.metros
-    #@targeting = Entry.targeting
+    @creative_types = Entry.creative_types
     @content = Entry.content
     @carriers = Entry.carriers
     @platforms = Entry.platforms
