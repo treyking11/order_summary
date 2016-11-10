@@ -25,4 +25,9 @@ class Entry < ActiveRecord::Base
     ['Mobile Banner', 'Tablet Banner']
   end
 
+  def self.audiences_prem
+    ['Political Affiliation: Republican', 'Political Affiliation: Democrat', 'Political Affiliation: Undecided']
+  end
+
+  
 end
