@@ -24,6 +24,7 @@ class EntriesController < ApplicationController
     @platforms = Entry.platforms
     @audiences = Entry.audiences
     @audiences_prem = Entry.audiences_prem
+    @operating_system = Entry.operating_system
   end
 
   # GET /entries/1/edit
@@ -93,7 +94,6 @@ class EntriesController < ApplicationController
         :states,
         :zip_codes,
         :address,
-        :operating_sys,
         :agency_name,
         :advertiser_name,
         :advertiser_url,
@@ -102,7 +102,8 @@ class EntriesController < ApplicationController
         :audiences => [],
         :metros => [],
         :carriers => [],
-        :content_cats => []
+        :content_cats => [],
+        :operating_sys => []
         )
     end
 
@@ -114,6 +115,8 @@ class EntriesController < ApplicationController
       @platforms = Entry.platforms
       @audiences = Entry.audiences
       @audiences_prem = Entry.audiences_prem
+      @operating_system = Entry.operating_system
+
     end
 
 end

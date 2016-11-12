@@ -13,3 +13,15 @@ $ ->
 $ ->
   $('#checkAll_3').click ->
     $('#all_carrier_categories input').prop('checked', $('#checkAll_3').prop('checked'))
+
+$ ->
+  $('#all_content_categories').click ->
+    $('#checkAll_1 input').removeAttr('checked')
+
+$ ->
+  $('#all_carrier_categories').click ->
+    $('#checkAll_2 input').removeAttr('checked')
+
+$ ->
+  $('#all_os_categories').click ->
+    $('#checkAll_3 input').removeAttr('checked')

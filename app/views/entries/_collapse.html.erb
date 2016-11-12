@@ -4,10 +4,11 @@
   </a>
   <div id="collapseOne" class="collapse">
     <div class="form-group">
-      <label class="form-check-inline">
-         <input class="form-check-input" type="checkbox" id="checkAll_1" checked> SELECT ALL </input>
-       </label>
-     </div>
+      <label class="form-check" id="checkAll_1">
+      <%= f.check_box(:content_cats, {multiple: false, checked: true}, "ALL", nil) %>
+        SELECT ALL
+      </label>
+   </div>
 
      <div class="form-group" id="all_content_categories">
        <% @content.each do |categories| %>
@@ -21,22 +22,49 @@
     </div>
   </div>
 </div>
+
 <div class="form-group">
   <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
     <h4>Carriers</h4>
   </a>
   <div id="collapseTwo" class="collapse">
     <div class="form-group">
-      <label class="form-check-inline">
-       <input class="form-check-input" type="checkbox" id="checkAll_2" checked> SELECT ALL </input>
+      <label class="form-check" id="checkAll_2">
+        <%= f.check_box(:carriers, {multiple: true, checked: true}, "ALL", nil) %>
+        SELECT ALL
      </label>
     </div>
+
     <div class="form-group" id="all_carrier_categories">
-     <%= @carriers.each do |carrier_name| %>
+     <% @carriers.each do |carrier_name| %>
        <div class="form-check">
          <label class="form-check-label">
            <%= f.check_box(:carriers, {multiple: true}, carrier_name, nil) %>
            <%= carrier_name %>
+         </label>
+       </div>
+     <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+    <h4>Operating Systems</h4>
+  </a>
+  <div id="collapseThree" class="collapse">
+    <div class="form-group">
+      <label class="form-check">
+       <input class="form-check-input" type="checkbox" id="checkAll_3" checked> SELECT ALL </input>
+     </label>
+    </div>
+
+    <div class="form-group" id="all_os_categories">
+     <% @operating_system.each do |os| %>
+       <div class="form-check">
+         <label class="form-check-label">
+           <%= f.check_box(:operating_sys, {multiple: true}, os, nil) %>
+           <%= os %>
          </label>
        </div>
      <% end %>

@@ -6,7 +6,7 @@ class Entry < ActiveRecord::Base
 
 
   def self.audiences
-    ['Affluent', 'African American Audience', 'Ages 25 - 34', 'Ages 35 - 44', 'Ages 45 - 54', 'Ages 55', 'Asian Audience', 'Auto Intenders', 'Business Travelers', 'Caucasian Audience', 'College Students', 'Entertainment Enthusiasts', 'Fitness Enthusiasts', 'Frequent Auto Service Shoppers', 'Frequent CDR Diners', 'Frequent Consumer Electronic Shoppers', 'Frequent Game Shoppers', 'Frequent Health & Beauty Shoppers', 'Frequent High End Grocery Shoppers', 'Frequent High End Restaurant Diners', 'Frequent Home Store Shoppers', 'Frequent Luxury Apparel Shoppers', 'Frequent Price Sensitive Grocery Shoppers', 'Frequent QSR Diners', 'Frequent Sporting Goods Shoppers', 'Healthcare Professionals', 'Hispanic Audience', 'Income $100k - $150k', 'Income  $150k', 'Income < $25k', 'Income $25k - $35k', 'Income $35k - $50k', 'Income $50k - $75k', 'Income $75k - $100k', 'Live Music Enthusiasts', 'Millennials 18-32', 'Millennials (Young) 18-24', 'Moms With Children In Household', 'Movie Enthusiasts', 'Outdoor Enthusiasts', 'Personal Investors', 'Pet Owners', 'Recent Hospital Visitors', 'Sports Enthusiasts', 'Technology Influencers', 'Urban Office Executives', 'Vacation Travelers']
+    ['Affluent', 'African American Audience', 'Ages 25 - 34', 'Ages 35 - 44', 'Ages 45 - 54', 'Ages 55 +', 'Asian Audience', 'Auto Intenders', 'Business Travelers', 'Caucasian Audience', 'College Students', 'Entertainment Enthusiasts', 'Fitness Enthusiasts', 'Frequent Auto Service Shoppers', 'Frequent CDR Diners', 'Frequent Consumer Electronic Shoppers', 'Frequent Game Shoppers', 'Frequent Health & Beauty Shoppers', 'Frequent High End Grocery Shoppers', 'Frequent High End Restaurant Diners', 'Frequent Home Store Shoppers', 'Frequent Luxury Apparel Shoppers', 'Frequent Price Sensitive Grocery Shoppers', 'Frequent QSR Diners', 'Frequent Sporting Goods Shoppers', 'Healthcare Professionals', 'Hispanic Audience', 'Income $100k - $150k', 'Income  $150k +', 'Income < $25k', 'Income $25k - $35k', 'Income $35k - $50k', 'Income $50k - $75k', 'Income $75k - $100k', 'Live Music Enthusiasts', 'Millennials 18-32', 'Millennials (Young) 18-24', 'Moms With Children In Household', 'Movie Enthusiasts', 'Outdoor Enthusiasts', 'Personal Investors', 'Pet Owners', 'Recent Hospital Visitors', 'Sports Enthusiasts', 'Technology Influencers', 'Urban Office Executives', 'Vacation Travelers']
   end
 
   def self.content
@@ -27,6 +27,10 @@ class Entry < ActiveRecord::Base
 
   def self.audiences_prem
      ['Political Affiliation: Republican', 'Political Affiliation: Democrat', 'Political Affiliation: Undecided']
+  end
+
+  def self.operating_system
+    ['iOS', 'Android']
   end
 
 end

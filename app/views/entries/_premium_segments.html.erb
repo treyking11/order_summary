@@ -1,11 +1,3 @@
-<div class="platform-inline">
- <%= f.check_box(:audiences_prem, {:multiple => true}, "Politcial Affiliation: Republican", nil) %>
- <strong>Politcial Affiliation: Republican<br/>
- <%= f.check_box(:audiences_prem, {:multiple => true}, "Politcial Affiliation: Democrat", nil) %>
- Politcial Affiliation: Democrat<br/>
- <%= f.check_box(:audiences_prem, {:multiple => true}, "Politcial Affiliation: Undecided", nil) %>
- Politcial Affiliation: Undecided</strong><br/>
-</div>
 
 <div class="form-group">
    <% @audiences_prem.each do |audience_name| %>
