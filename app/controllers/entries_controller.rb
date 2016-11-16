@@ -97,6 +97,7 @@ class EntriesController < ApplicationController
         :agency_name,
         :advertiser_name,
         :advertiser_url,
+        :geofence_poi,
         :audiences_prem => [],
         :platforms => [],
         :audiences => [],

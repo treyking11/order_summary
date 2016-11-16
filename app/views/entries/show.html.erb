@@ -1,5 +1,23 @@
 
 <p id="notice"><%= notice %></p>
 <%= @entry.to_json %>
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
-<%= link_to 'Back', entries_path %>
+
+<div class= "container-fluid">
+  <div id= "title">
+    <h1>Campaign Successfully Entered!</h1>
+  </div>
+
+  <div class= "form-group">
+    <label class="form-check-label">
+      Please Use The 'Download As CSV' Button To Export The Campaign Data For Email Attachment
+    </label>
+  </div>
+
+  <div class= "form-group">
+    <a class="btn btn-primary" href="/sample geo-fence upload spreadsheet.xlsx"> Download Geofence POI Template </a>
+  </div>
+
+  <div class= "form-group">
+    <a class="btn btn-primary" href="/expandable_request_form.xlsx"> Download Expandable Request Form </a>
+  </div>
+</div>

@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161107215548) do
+ActiveRecord::Schema.define(version: 20161115011128) do
 
   create_table "entries", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.date     "start_date"
     t.date     "end_date"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.integer  "imp_quantity"
     t.decimal  "advertiser_rate"
     t.text     "platforms"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20161107215548) do
     t.text     "advertiser_name"
     t.text     "advertiser_url"
     t.text     "audiences_prem"
+    t.boolean  "geofence_poi",    default: false
   end
 
 end

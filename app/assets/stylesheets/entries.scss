@@ -73,4 +73,17 @@ h4 {
 
 form#new_entry.new_entry {
   margin-left: 100px;
+  margin-right: 100px;
+}
+
+#title {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #173A5C;
+}
+
+input.btn.btn-primary {
+  background-color: #173A5C !important;
+  margin-top: 40px;
+  color: #fff;
 }
