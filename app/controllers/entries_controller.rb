@@ -10,18 +10,16 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
-    @output = Entry.order(:created_at).last
     # @output = @entry.order(:created_at).last
     respond_to do |format|
       format.html
       format.csv do
         x = CSV.generate do |csv|
-          binding.pry
-          csv << @output.attributes.keys
-          csv << @output.attributes.values
-        end 
-        send_data x, filename: "Entry-#{@output.id}-#{Date.today}.csv"
-      end 
+          csv << @entry.attributes.keys
+          csv << @entry.attributes.values
+        end
+        send_data x, filename: "Entry ID ##{@entry.id} (#{Date.today}).csv"
+      end
     end
   end
 
