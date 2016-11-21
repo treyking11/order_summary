@@ -10,7 +10,12 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
-    # @entry = Entry.find(params [:id])
+    @output = Entry.order(:created_at).last
+    # @output = @entry.order(:created_at).last
+    respond_to do |format|
+      format.html
+      format.csv {render text: @output.as_csv}
+    end
   end
 
   # GET /entries/new

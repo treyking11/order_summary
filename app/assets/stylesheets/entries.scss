@@ -76,6 +76,11 @@ form#new_entry.new_entry {
   margin-right: 100px;
 }
 
+// .container-fluid.col-xs-12 {
+//   margin-left: 100px;
+//   margin-right: 100px;
+// }
+
 #title {
   padding-bottom: 9px;
   margin: 40px 0 20px;
@@ -85,5 +90,13 @@ form#new_entry.new_entry {
 input.btn.btn-primary {
   background-color: #173A5C !important;
   margin-top: 40px;
+  margin-bottom: 20px;
   color: #fff;
+}
+
+a.btn.btn-primary {
+  background-color: #173A5C !important;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  color: #fff !important;
 }

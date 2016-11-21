@@ -1,23 +1,55 @@
 
-<p id="notice"><%= notice %></p>
-<%= @entry.to_json %>
+  <%= @entry.to_json %>
 
-<div class= "container-fluid">
-  <div id= "title">
-    <h1>Campaign Successfully Entered!</h1>
-  </div>
+  <div class= "container-fluid col-xs-12">
+    <div id= "title">
+      <h1>Campaign Successfully Entered!</h1>
+    </div>
 
-  <div class= "form-group">
-    <label class="form-check-label">
-      Please Use The 'Download As CSV' Button To Export The Campaign Data For Email Attachment
-    </label>
-  </div>
+    <div class= "form-group">
+      <h3>Please Download, Complete, And Attach The Following Documents To Your Submission Email</h3>
+    </div>
+    <div class= "form-group">
+      <h4>Required Documents</h4>
+    </div>
 
-  <div class= "form-group">
-    <a class="btn btn-primary" href="/sample geo-fence upload spreadsheet.xlsx"> Download Geofence POI Template </a>
-  </div>
+    <div class= "form-group">
+      <label class="form-check-label">
+        Download Your Campaign Information As CSV
+      </label>
+      <div>
+        <%= link_to 'Download New Campaign Data', entries_path(format: :csv), class: "btn-primary"%>
+      </div>
+    </div>
 
-  <div class= "form-group">
-    <a class="btn btn-primary" href="/expandable_request_form.xlsx"> Download Expandable Request Form </a>
-  </div>
+    <div class= "form-group">
+      <label class="form-check-label">
+      Complete The 'Geofence POI Template' ONLY If You Are Using Geofencing
+      </label>
+      <div>
+        <a class="btn btn-primary btn-lg" href="/sample geo-fence upload spreadsheet.xlsx"> Download Geofence POI Template </a>
+      </div>
+    </div>
+
+    <div class= "form-group">
+      <label class="form-check-label">
+        Complete The 'Expandable Request Form' ONLY If Rich Media Creative Is Being Requested
+      </label>
+      <div>
+        <a class="btn btn-primary btn-lg" href="/expandable_request_form.xlsx"> Download Expandable Request Form </a>
+      </div>
+    </div>
+
+    <div class= "form-group">
+      <h4>Optional Documents</h4>
+    </div>
+
+    <div class= "form-group">
+      <label class="form-check-label">
+        Complete The 'Insertion Order Form' For Campaign Processing
+      </label>
+      <div>
+        <a class="btn btn-primary btn-lg" href="/IO TEMPLATE_Agency Buy_110114.xlsx"> Download Insertion Order Form </a>
+      </div>
+    </div>
 </div>
