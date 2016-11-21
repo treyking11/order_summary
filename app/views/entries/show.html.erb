@@ -18,7 +18,7 @@
         Download Your Campaign Information As CSV
       </label>
       <div>
-        <%= link_to 'Download New Campaign Data', entries_path(format: :csv), class: "btn-primary"%>
+        <%= link_to 'Download New Campaign Data', entry_path(@entry.id, format: :csv), class: "btn-primary"%>
       </div>
     </div>
 

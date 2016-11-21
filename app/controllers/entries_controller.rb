@@ -14,7 +14,14 @@ class EntriesController < ApplicationController
     # @output = @entry.order(:created_at).last
     respond_to do |format|
       format.html
-      format.csv {render text: @output.as_csv}
+      format.csv do
+        x = CSV.generate do |csv|
+          binding.pry
+          csv << @output.attributes.keys
+          csv << @output.attributes.values
+        end 
+        send_data x, filename: "Entry-#{@output.id}-#{Date.today}.csv"
+      end 
     end
   end
 
