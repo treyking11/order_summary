@@ -100,7 +100,6 @@ class EntriesController < ApplicationController
         :updated_at,
         :imp_quantity,
         :advertiser_rate,
-        :creative_types,
         :states,
         :zip_codes,
         :address,
@@ -115,6 +114,7 @@ class EntriesController < ApplicationController
         :carriers => [],
         :content_cats => [],
         :operating_sys => [],
+        :creative_types => [],
         )
     end
 
