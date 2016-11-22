@@ -114,7 +114,7 @@ class EntriesController < ApplicationController
         :metros => [],
         :carriers => [],
         :content_cats => [],
-        :operating_sys => []
+        :operating_sys => [],
         )
     end
 

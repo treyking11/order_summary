@@ -6,7 +6,7 @@
     <div class="form-group">
       <label class="form-check" id="checkAll_1">
         <div class="form-group">DO NOT MODIFY THIS SECTION IF AUDIENCES HAVE BEEN SELECTED!</div>
-      <%= f.check_box(:content_cats, {multiple: false, checked: true}, "ALL", nil) %>
+        <%= f.check_box(:content_cats, {checked: true}, "ALL", nil) %>
         SELECT ALL
       </label>
    </div>
@@ -31,7 +31,7 @@
   <div id="collapseTwo" class="collapse">
     <div class="form-group">
       <label class="form-check" id="checkAll_2">
-        <%= f.check_box(:carriers, {multiple: false, checked: true}, "ALL", nil) %>
+        <%= f.check_box(:carriers, {checked: true}, "ALL", nil) %>
         SELECT ALL
      </label>
     </div>
@@ -56,7 +56,7 @@
   <div id="collapseThree" class="collapse">
     <div class="form-group">
       <label class="form-check" id="checkAll_3">
-        <%= f.check_box(:operating_sys, {multiple: false, checked: true}, "ALL", nil) %>
+        <%= f.check_box(:operating_sys, {checked: true}, "ALL", nil) %>
         SELECT ALL
      </label>
     </div>
