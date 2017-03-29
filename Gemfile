@@ -37,6 +37,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'rspec'
+gem 'rspec-rails'
+gem 'factory_girl_rails'
+gem 'shoulda-matchers'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -27,14 +27,6 @@ class EntriesController < ApplicationController
   def new
     # @options_for_platform = Entry.options_for_platform
     @entry = Entry.new
-    @metros = Entry.metros
-    @creative_types = Entry.creative_types
-    @content = Entry.content
-    @carriers = Entry.carriers
-    @platforms = Entry.platforms
-    @audiences = Entry.audiences
-    @audiences_prem = Entry.audiences_prem
-    @operating_system = Entry.operating_system
   end
 
   # GET /entries/1/edit
@@ -120,14 +112,13 @@ class EntriesController < ApplicationController
 
     def set_loop_arrays
       @metros = Entry.metros
-      #@targeting = Entry.targeting
+      @creative_types = Entry.creative_types
       @content = Entry.content
       @carriers = Entry.carriers
       @platforms = Entry.platforms
       @audiences = Entry.audiences
       @audiences_prem = Entry.audiences_prem
       @operating_system = Entry.operating_system
-
     end
 
 end
